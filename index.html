@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="snap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Добавляем новые стили для улучшенного вида */
+        body {
+            overflow-x: hidden;
+        }
+        
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .make {
+            margin-top: 80px; /* Учитываем фиксированный header */
+        }
+        
+        /* Эффекты для изображений */
+        .imgg img {
+            cursor: pointer;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* Плавные переходы для всех элементов */
+        * {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+    <title>Snap - Modern Web Design</title>
+</head>
+<body>
+        <div class="header">
+           <div class="nom">
+                <h1>Snap</h1>
+
+                <ul>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn"><i class="fas fa-feather"></i> Features </a>
+                        <div class="dropdown-content">
+                            <a href="#"><i class="fas fa-check-square"></i> Todo list</a>
+                            <a href="#"><i class="fas fa-calendar"></i> Calendar</a>
+                            <a href="#"><i class="fas fa-bell"></i> Reminders</a>
+                            <a href="#"><i class="fas fa-tasks"></i> Planning</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn"><i class="fas fa-building"></i> Company</a>
+                        <div class="dropdown-content">
+                            <a href="#"><i class="fas fa-history"></i> History</a>
+                            <a href="#"><i class="fas fa-users"></i> Our Team</a>
+                            <a href="#"><i class="fas fa-blog"></i> Blog</a>
+                        </div>
+                    </li>
+                    <li>Careers</li>
+                    <li>About</li>
+                </ul>
+           </div>
+           
+           <div class="nom">
+            <button class="log">login</button>
+            <button class=" reg">register</button>
+           </div>
+        </div>
+
+        <div class="make">
+        
+            <div>
+                <h1>Make <br> your work</h1>
+                <p >Get your team in sync, no matter your location. 
+                    Streamline processes, create team rituals, and watch productivity soar.</p>
+
+    <button class="btn">Learn more</button>
+            </div>
+            
+            <img class="img" src="img/imghero.png">
+    </div>
+
+    <!-- Подключаем JavaScript файл с анимациями -->
+    <script src="script.js"></script>
+</body>
+</html>
