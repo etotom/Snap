@@ -72,6 +72,16 @@ document.addEventListener('DOMContentLoaded', function() {
         const header = document.querySelector('.header');
         const originalPadding = window.getComputedStyle(header).padding;
         
+        // Проверяем, не мобильное ли устройство
+        const isMobile = window.innerWidth <= 768;
+        
+        if (isMobile) {
+            // Для мобильных устройств убираем фиксированное позиционирование
+            header.style.position = 'relative';
+            header.style.top = '0';
+            return;
+        }
+        
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
                 header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
